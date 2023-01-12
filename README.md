@@ -17,9 +17,9 @@ This is a TO-DO list app project with Laravel, With The Help of Laravel livewire
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 
-## YouTube Playlist
+## YouTube
 
-<a href="https://youtube.com/playlist?list=PLQIZMhnX3oI_uEraTPgbXdQ7BXsVgW8L0" target="_blank">Playlist</a>
+<a href="https://www.youtube.com/@CodingWithShakur" target="_blank">My YouTube</a>
 
 
 ## Discord Server
