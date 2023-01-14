@@ -48,10 +48,13 @@
 
 
 <x-app-layout>
-    <div class="container py-5">
+    <div class="container text-center">
+        <h2 class="py-2 text-success">First Login Or Register To Access The Application</h2>
+    </div>
+
+    <div class="container py-5 col-md-4 col-lg-4 col-xl-4">
         <form method="POST" action="{{ route('login') }}">
             @csrf
-            <h2 class="py-2 text-success">First Login Or Register To Access The Application</h2>
             <div class="mb-3">
                 <input type="email" placeholder="Enter Your Email" class="form-control" aria-describedby="validationEmail"
                     name="email" :value="old('email')" required autofocus>

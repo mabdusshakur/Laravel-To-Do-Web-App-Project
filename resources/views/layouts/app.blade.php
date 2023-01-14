@@ -48,6 +48,9 @@
 </head>
 
 <body>
+    <header>
+        @include('layouts.header')
+    </header>
 
     {{ $slot }}
 
