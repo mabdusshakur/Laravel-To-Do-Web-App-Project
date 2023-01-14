@@ -1,4 +1,4 @@
-<x-guest-layout>
+{{-- <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -44,4 +44,33 @@
             </x-primary-button>
         </div>
     </form>
-</x-guest-layout>
+</x-guest-layout> --}}
+
+
+<x-app-layout>
+    <div class="container py-5">
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
+            <h2 class="py-2 text-success">First Login Or Register To Access The Application</h2>
+            <div class="mb-3">
+                <input type="email" placeholder="Enter Your Email" class="form-control" aria-describedby="validationEmail"
+                    name="email" :value="old('email')" required autofocus>
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+
+            </div>
+            <div class="mb-3">
+                <input type="password" placeholder="Enter Your Password" class="form-control" name="password" required
+                    autocomplete="current-password">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" name="remember">
+                <label class="form-check-label" name="remember">Remember Me</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="py-2">
+                <a href="{{ route('register') }}" class="link link-warning">Not registered Yet?</a>
+            </div>
+        </form>
+    </div>
+
+</x-app-layout>
