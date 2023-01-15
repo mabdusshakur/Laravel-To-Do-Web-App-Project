@@ -50,6 +50,7 @@ class TodoComponent extends Component
     {
         $this->todolists = Todo::with('user')
             ->where(['user_id' => Auth::user()->id])
+            ->latest()
             ->get();
         return view('livewire.todo-component');
     }
