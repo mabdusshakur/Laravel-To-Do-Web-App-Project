@@ -15,8 +15,10 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         @auth
                             <li><a class="dropdown-item" href="{{ route('logout') }}">Log Out</a></li>
+                            <li><a class="dropdown-item" href="{{ url('profile') }}">Profile</a></li>
+                        @else
+                        <li><a class="dropdown-item">Login To See Options</a></li>
                         @endauth
-                        <li><a class="dropdown-item" href="{{ url('profile') }}">Profile</a></li>
                     </ul>
                 </li>
             </ul>
