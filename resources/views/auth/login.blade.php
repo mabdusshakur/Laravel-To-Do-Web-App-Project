@@ -67,7 +67,7 @@
             @csrf
             <div class="mb-3">
                 <input type="email" placeholder="Enter Your Email" class="form-control" aria-describedby="validationEmail"
-                    name="email" :value="old('email')" required autofocus>
+                    name="email" value="{{old('email')}}" required autofocus>
                 <div id="emailHelp" class="form-text text-white shadow-lg">We'll never share your email with anyone else.</div>
 
             </div>
