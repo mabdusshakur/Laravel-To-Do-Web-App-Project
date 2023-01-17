@@ -5,7 +5,7 @@
                 <div class="card rounded-3">
                     <div class="card-body p-4">
 
-                        <h4 class="text-center my-3 pb-3">To Do App</h4>
+                        <h4 class="text-center my-3 pb-3">My Todo's</h4>
 
                         <form wire:submit.prevent="{{$updateMode ==  true ? "updateTodo" : "addTodo"}}"
                             class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
