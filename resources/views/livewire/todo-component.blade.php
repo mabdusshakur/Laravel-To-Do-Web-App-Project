@@ -30,7 +30,7 @@
                         <table class="table mb-4">
                             <thead>
                                 <tr>
-                                    <th scope="col">No.</th>
+                                    <th scope="col">No</th>
                                     <th scope="col">Todo's</th>
                                     <th scope="col">Actions</th>
                                 </tr>
@@ -47,7 +47,7 @@
                                             <!-- Button trigger modal -->
                                             <button wire:click="editeTodo({{ $todos->id }})" type="button"
                                                 class="btn btn-primary">
-                                                Edite
+                                                Update
                                             </button>
                                         </td>
                                     </tr>
