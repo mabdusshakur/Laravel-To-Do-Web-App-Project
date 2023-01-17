@@ -32,7 +32,7 @@
                                 <tr>
                                     <th scope="col">No</th>
                                     <th scope="col">Todo's</th>
-                                    <th scope="col">Actions</th>
+                                    <th scope="col">Action's</th>
                                 </tr>
                             </thead>
                             <tbody>
