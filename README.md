@@ -9,8 +9,8 @@ This is a TO-DO list app project with Laravel, With The Help of Laravel livewire
  REST API
 
 
-
 ##Contribute
+
 I will be happy if someone contributes to this project and make it better
 
 ## Tech Stack
