@@ -16,7 +16,6 @@ I will be happy if someone contributes to this project and make it better
 ## Tech Stack
 
 **Client:** Blade Templates, Bootstrap
-
 **Server:** PHP (Laravel),
 
 
