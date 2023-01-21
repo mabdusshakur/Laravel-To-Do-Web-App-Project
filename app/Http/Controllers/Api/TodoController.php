@@ -113,7 +113,6 @@ class TodoController extends Controller
     public function destroy(Request $request,Todo $todo)
     {
         $todo->delete();
-        $todoId = $request->get('id');
         return response()->json([
             'message' => "Todo Deleted Successfully"
         ]);
