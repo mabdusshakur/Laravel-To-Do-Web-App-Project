@@ -16,6 +16,7 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         $users = User::all();
@@ -30,6 +31,7 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
         //password_confirmation field also required during API requests
@@ -58,6 +60,7 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
+
     public function show(User $user)
     {
         return response()->json($user);
@@ -69,6 +72,7 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
+
     public function edit(User $user)
     {
         //
@@ -81,6 +85,7 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
+
     public function update(Request $request, User $user)
     {
         $request->validate([
@@ -105,13 +110,12 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
+
     public function destroy(User $user)
     {
         $user->delete();
-
         return response()->json([
             'message' => 'User Deleted Success Fully',
-
         ]);
     }
 }
