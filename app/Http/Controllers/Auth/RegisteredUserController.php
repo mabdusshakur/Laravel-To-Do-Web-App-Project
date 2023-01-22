@@ -36,10 +36,16 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+        $imageName = time().'.'.$request->image->extension();
+        $request->image->move(public_path('images'), $imageName);
+        $path = 'images/'. $imageName;
+
         $user = User::create([
+
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'image'=> $path,
         ]);
 
         event(new Registered($user));

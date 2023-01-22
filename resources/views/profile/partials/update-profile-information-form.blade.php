@@ -22,6 +22,8 @@
                 value="{{ old('name', $user->name) }}" required autofocus autocomplete="name">
         </div>
 
+
+
         <div class="form-group col-md-2 py-2">
             <input type="email" placeholder="Enter Your email" class="form-control" name="email"
                 value="{{ old('email', $user->email) }}" required autofocus autocomplete="email">

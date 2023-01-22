@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
         @csrf
 
         <!-- Name -->
@@ -37,6 +37,13 @@
                             name="password_confirmation" required />
 
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+        </div>
+
+
+        {{-- Image --}}
+        <div class="mt-4">
+            {{-- <img src="cinqueterre.jpg" class="rounded-circle" alt="Cinque Terre" width="304" height="236"> --}}
+            <input type="file" name="image">
         </div>
 
         <div class="flex items-center justify-end mt-4">
