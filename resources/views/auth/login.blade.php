@@ -62,7 +62,8 @@
         <h2 class="py-2 text-success">First Login Or Register To Access The Application</h2>
     </div>
 
-    <div class="container py-5 col-md-7 col-lg-6 col-xl-4 bg-black bg-opacity-25">
+    {{-- Normal Login --}}
+    {{-- <div class="container py-5 col-md-7 col-lg-6 col-xl-4 bg-black bg-opacity-25">
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <div class="mb-3">
@@ -84,6 +85,32 @@
                 <a href="{{ route('register') }}" class="link link-warning">Not registered Yet?</a>
             </div>
         </form>
+    </div> --}}
+
+    {{-- Api Login --}}
+    <div class="container py-5 col-md-7 col-lg-6 col-xl-4 bg-black bg-opacity-25">
+
+        {{-- <form method="POST" action="{{ route('login') }}">
+            @csrf
+            <div class="mb-3">
+                <input type="email" placeholder="Enter Your Email" class="form-control" aria-describedby="validationEmail"
+                    name="email" value="{{old('email')}}" required autofocus>
+                <div id="emailHelp" class="form-text text-white shadow-lg">We'll never share your email with anyone else.</div>
+
+            </div>
+            <div class="mb-3">
+                <input type="password" placeholder="Enter Your Password" class="form-control" name="password" required
+                    autocomplete="current-password">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" name="remember">
+                <label class="form-check-label text-white shadow-lg" name="remember">Remember Me</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="py-2">
+                <a href="{{ route('register') }}" class="link link-warning">Not registered Yet?</a>
+            </div>
+        </form> --}}
     </div>
 
 </x-app-layout>

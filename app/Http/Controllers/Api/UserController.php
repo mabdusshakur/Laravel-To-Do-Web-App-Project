@@ -7,6 +7,7 @@ use App\Http\Requests\ProfileUpdateRequest;
 use App\Models\User;
 use Illuminate\Validation\Rules;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -52,6 +53,23 @@ class UserController extends Controller
             'message' => 'User Account Created Successfully',
             'user' => $user,
         ]);
+    }
+
+
+    public function login(Request $request)
+    {
+        if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
+
+            return response()->json([
+                'message' => 'User Account Created Successfully',
+                'userName' => Auth::user()->name,
+            ]);
+        }
+        else{
+            return response()->json([
+                'message' => 'Unauthorised'
+            ]);
+        }
     }
 
     /**

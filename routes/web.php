@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginWithApiController;
 use App\Http\Controllers\logOutController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Livewire\TodoComponent;
@@ -21,6 +22,11 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/',TodoComponent::class)->name('todo');
+});
+
+Route::group(['prefix' => '/withapi'],function(){
+    Route::get('login',[LoginWithApiController::class, 'index']);
+    Route::get('register',[LoginWithApiController::class, 'register']);
 });
 
 require __DIR__.'/auth.php';

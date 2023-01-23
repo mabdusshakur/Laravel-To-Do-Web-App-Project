@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::apiResource('todos',TodoController::class);
 Route::apiResource('users',UserController::class);
+
+Route::post('login', [UserController::class, 'login']);
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
