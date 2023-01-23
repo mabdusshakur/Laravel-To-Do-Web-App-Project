@@ -2,6 +2,7 @@
 # Laravel To-Do List Web App 
 
 This is a TO-DO list app project with Laravel, With The Help of Laravel livewire and Laravel breeze for the User Authentication System. Also, This project will help to learn CRUD Operations Using Laravel Livewire. Hope you all will like this project. { Now Newly Added REST API For Todos And User Auth System }
+!! I am considering stopping this project and making both a separate API and CLIENT application !! (23-01-2023)
 
 ### OLD
  Livewire + Simple CRUD
