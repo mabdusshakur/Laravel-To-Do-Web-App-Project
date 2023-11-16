@@ -10,19 +10,6 @@ class LoginWithApiController extends Controller
 {
     public function index(Request $request)
     {
-        // $client = new \GuzzleHttp\Client();
-        // // $response = $http->post('http://127.0.0.1:8000/api/login', [
-        // //     'form_params' => [
-        // //         'email' => 'panda12@gmail.com',
-        // //         'password' => 'panda1221',
-        // //     ]
-        // // ]);
-
-        // // return "ddd";
-        // $client = new \GuzzleHttp\Client();
-        // $response = $client->request('GET', 'http://127.0.0.1:8000/api/users');
-        // return "dd";
-
         return Http::get('http://127.0.0.1:8000/api/users');
     }
 
